@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+  <display-name>RedisManage</display-name>
+  <context-param>
+	  	<param-name>webAppRootKey</param-name>
+	 	<param-value>RedisManage.root</param-value>
+ </context-param>
+	 
+  <servlet>
+    <servlet-name>RedisMain</servlet-name>
+    <servlet-class>com.smart.handler.Query</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>RedisMain</servlet-name>
+    <url-pattern>/query</url-pattern>
+  </servlet-mapping>	
+  <!-- 查询结束 -->
+  <!-- 模糊查询 -->
+  <servlet>
+    <servlet-name>like</servlet-name>
+    <servlet-class>com.smart.handler.Like</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>like</servlet-name>
+    <url-pattern>/like</url-pattern>
+  </servlet-mapping>	
+    <!-- 删除 -->
+  <servlet>
+    <servlet-name>del</servlet-name>
+    <servlet-class>com.smart.handler.Del</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>del</servlet-name>
+    <url-pattern>/del</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
