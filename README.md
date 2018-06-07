@@ -2,7 +2,7 @@
 java版本redis集群管理工具,纯servlet
 '''
 >>@Version:0.1Beta\<br>  
->>@auther:zhaofangcheng\<br>    
+>>@author:zhaofangcheng\<br>    
 >>@e-mail:zhaofangcheng@126.com\<br>  
 >>依赖jar：\<br>  
 >>>>>jedis-2.7.3.jar\<br>  
